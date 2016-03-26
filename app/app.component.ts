@@ -5,7 +5,6 @@ interface Hero {
     name: string;
 }
 
-
 @Component({
     selector: 'ng2-preybird-app',
     template: `
