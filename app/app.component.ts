@@ -22,7 +22,8 @@ import {HeroDetailComponent} from './hero-detail.component';
         background-color: #CFD8DC !important;
         color: white;
       }
-    `]
+    `],
+    directives: [HeroDetailComponent]
 })
 
 export class AppComponent {
