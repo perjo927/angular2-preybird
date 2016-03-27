@@ -1,22 +1,24 @@
 import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { RouteConfig, ROUTER_PROVIDERS } from 'angular2/router';
 import { HomeComponent } from './home/home.component';
 import { PortfolioService } from './portfolio/portfolio.service';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectDetailComponent } from "./portfolio/project-detail.component";
-import { NavComponent } from "./nav/nav.component";
+import { NavigationComponent } from "./navigation/navigation.component";
 
 @Component({
     selector: 'programmer-per-app',
     templateUrl: 'app/app.component.html',
-    directives: [NavComponent],
+    directives: [NavigationComponent],
     providers: [
         ROUTER_PROVIDERS,
         PortfolioService
+        // TODO: NavigationService, RouteService
     ],
     styleUrls: ['app/app.component.css'],
 })
 
+// TODO: NavigationService? Route extends Navigation?
 @RouteConfig([
     {
         path: '/home',
