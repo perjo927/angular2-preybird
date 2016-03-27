@@ -1,4 +1,4 @@
-export interface Project {
-    id: number;
-    name: string;
+import { Card } from '../card/card';
+
+export interface Project extends Card {
 }
