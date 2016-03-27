@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { PortfolioService } from '../portfolio/portfolio.service';
-import { Portfolio } from "../portfolio/portfolio";
+import { Project } from "../portfolio/project";
 
 @Component({
     selector: 'cv-home',
@@ -10,19 +10,19 @@ import { Portfolio } from "../portfolio/portfolio";
 })
 
 export class HomeComponent implements OnInit {
-    portfolios: Portfolio[] = [];
+    portfolios: Project[] = [];
 
     constructor(
         private _router: Router,
         private _portfolioService: PortfolioService) { }
 
     ngOnInit() {
-        this._portfolioService.getPortfolios()
+        this._portfolioService.getPortfolio()
             .then(portfolios => this.portfolios = portfolios.slice(1,5));
     }
 
-    gotoDetail(portfolio: Portfolio) {
-        let link = ['PortfolioDetail', { id: portfolio.id }];
+    gotoDetail(project: Project) {
+        let link = ['PortfolioDetail', { id: project.id }];
         this._router.navigate(link);
     }
 }

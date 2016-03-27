@@ -1,10 +1,10 @@
-<div *ngIf="portfolio">
-    <h2>{{portfolio.name}} details!</h2>
+<div *ngIf="project">
+    <h2>{{project.name}} details!</h2>
     <div>
-        <label>id: </label>{{portfolio.id}}</div>
+        <label>id: </label>{{project.id}}</div>
     <div>
         <label>name: </label>
-        <input [(ngModel)]="portfolio.name" placeholder="name" />
+        <input [(ngModel)]="project.name" placeholder="name" />
     </div>
     <button (click)="goBack()">Back</button>
 </div>

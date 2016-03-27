@@ -1,6 +1,6 @@
-import {Portfolio} from './portfolio';
+import { Project } from './project';
 
-export var PORTFOLIOS: Portfolio[] = [
+export var PORTFOLIO: Project[] = [
     { "id": 11, "name": "Thing 1" },
     { "id": 12, "name": "Thing 2" },
     { "id": 13, "name": "Thing 3" },

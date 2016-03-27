@@ -1,14 +1,14 @@
-<ul class="portfolios">
-    <li *ngFor="#portfolio of portfolios"
-        (click)="onSelect(portfolio)"
-        [class.selected]="portfolio === selectedPortfolio">
-        <span class="badge">{{portfolio.id}}</span> {{portfolio.name}}
+<ul class="portfolio">
+    <li *ngFor="#project of portfolio"
+        (click)="onSelect(project)"
+        [class.selected]="project === selectedProject">
+        <span class="badge">{{project.id}}</span> {{project.name}}
     </li>
 </ul>
 
-<div *ngIf="selectedPortfolio">
+<div *ngIf="selectedProject">
     <h2>
-        {{selectedPortfolio.name | uppercase}} is what I want to see
+        {{selectedProject.name | uppercase}} is what I want to see
     </h2>
     <button (click)="gotoDetail()">View Details</button>
 </div>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import {Portfolio} from './portfolio';
+import { Project } from './project';
 import { PortfolioService } from './portfolio.service';
 
 
@@ -12,12 +12,12 @@ import { PortfolioService } from './portfolio.service';
 
 export class PortfolioDetailComponent implements OnInit{
     @Input()
-    portfolio: Portfolio;
+    project: Project;
 
     ngOnInit() {
         let id = Number(this._routeParams.get('id'));
-        this._portfolioService.getPortfolio(id)
-            .then(portfolio => this.portfolio = portfolio);
+        this._portfolioService.getProject(id)
+            .then(project => this.project = project);
     }
 
     constructor(

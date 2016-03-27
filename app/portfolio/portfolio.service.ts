@@ -1,15 +1,15 @@
 import {Injectable} from 'angular2/core';
-import {PORTFOLIOS} from './mock-portfolios';
+import {PORTFOLIO} from './mock-portfolio';
 
 @Injectable()
 export class PortfolioService {
-    getPortfolios() {
-        return Promise.resolve(PORTFOLIOS);
+    getPortfolio() {
+        return Promise.resolve(PORTFOLIO);
     }
 
-    getPortfolio(id: number) {
-        return Promise.resolve(PORTFOLIOS).then(
-            portfolios => portfolios.filter(portfolio => portfolio.id === id)[0]
+    getProject(id: number) {
+        return Promise.resolve(PORTFOLIO).then(
+            portfolio => portfolio.filter(project => project.id === id)[0]
         );
     }
 }

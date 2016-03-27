@@ -1,10 +1,9 @@
-import {Component} from 'angular2/core'
+import { Component } from 'angular2/core'
 import { Router } from 'angular2/router';
-import {Portfolio} from './portfolio';
-import {PortfolioDetailComponent} from './portfolio-detail.component';
-import {PortfolioService} from './portfolio.service';
-import {OnInit} from 'angular2/core';
-import {Portfolio} from "./portfolio";
+import { Project } from './project';
+import { PortfolioDetailComponent } from './portfolio-detail.component';
+import { PortfolioService } from './portfolio.service';
+import {OnInit } from 'angular2/core';
 
 // TODO: Refactor to generic / reusable / implement
 
@@ -16,8 +15,8 @@ import {Portfolio} from "./portfolio";
 })
 
 export class PortfolioComponent implements OnInit {
-    portfolios : Portfolio[];
-    selectedPortfolio: Portfolio;
+    portfolio : Project[];
+    selectedProject: Project;
 
     constructor(
         private _router: Router,
@@ -25,18 +24,18 @@ export class PortfolioComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.getPortfolios();
+        this.getPortfolio();
     }
 
-    onSelect(portfolio: Portfolio) {
-        this.selectedPortfolio = portfolio;
+    onSelect(project: Project) {
+        this.selectedProject = project;
     }
 
-    getPortfolios() {
-        this._portfolioService.getPortfolios().then(portfolios => this.portfolios = portfolios);
+    getPortfolio() {
+        this._portfolioService.getPortfolio().then(portfolio => this.portfolio = portfolio);
     }
 
     gotoDetail() {
-        this._router.navigate(['PortfolioDetail', { id: this.selectedPortfolio.id }]);
+        this._router.navigate(['PortfolioDetail', { id: this.selectedProject.id }]);
     }
 }
