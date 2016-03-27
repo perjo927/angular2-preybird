@@ -1,6 +1,6 @@
 {
   "name": "ng2-preybird",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
