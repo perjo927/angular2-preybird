@@ -1,11 +1,11 @@
 
-.heroes {
+.portfolio {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 24em;
 }
-.heroes li {
+.portfolio li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -15,26 +15,26 @@
     height: 1.6em;
     border-radius: 4px;
 }
-.heroes li:hover {
+.portfolio li:hover {
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
 }
-.heroes li.selected:hover {
+.portfolio li.selected:hover {
     background-color: #BBD8DC;
     color: white;
 }
-.heroes .text {
+.portfolio .text {
     position: relative;
     top: -3px;
 }
-.heroes {
+.portfolio {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 24em;
 }
-.heroes li {
+.portfolio li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -44,24 +44,24 @@
     height: 1.6em;
     border-radius: 4px;
 }
-.heroes li:hover {
+.portfolio li:hover {
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
 }
-.heroes li.selected {
+.portfolio li.selected {
     background-color: #CFD8DC;
     color: white;
 }
 
-.heroes li.selected:hover {
+.portfolio li.selected:hover {
     background-color: #BBD8DC;
 }
-.heroes .text {
+.portfolio .text {
     position: relative;
     top: -3px;
 }
-.heroes .badge {
+.portfolio .badge {
     display: inline-block;
     font-size: small;
     color: white;
