@@ -5,8 +5,6 @@ import { ProjectDetailComponent } from './project-detail.component';
 import { PortfolioService } from './portfolio.service';
 import { OnInit } from 'angular2/core';
 
-// TODO: Refactor to generic / reusable / implement
-
 @Component({
     selector: 'portfolio',
     templateUrl: 'app/portfolio/portfolio.component.html',
