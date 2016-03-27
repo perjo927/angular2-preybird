@@ -4,11 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioService } from './portfolio/portfolio.service';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectDetailComponent } from "./portfolio/project-detail.component";
+import { NavComponent } from "./nav/nav.component";
 
 @Component({
-    selector: 'cv-app',
+    selector: 'programmer-per-app',
     templateUrl: 'app/app.component.html',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [NavComponent],
     providers: [
         ROUTER_PROVIDERS,
         PortfolioService
