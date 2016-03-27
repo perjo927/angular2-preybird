@@ -1,9 +1,9 @@
 import { Component } from 'angular2/core'
 import { Router } from 'angular2/router';
 import { Project } from './project';
-import { PortfolioDetailComponent } from './portfolio-detail.component';
+import { ProjectDetailComponent } from './project-detail.component';
 import { PortfolioService } from './portfolio.service';
-import {OnInit } from 'angular2/core';
+import { OnInit } from 'angular2/core';
 
 // TODO: Refactor to generic / reusable / implement
 
@@ -11,7 +11,7 @@ import {OnInit } from 'angular2/core';
     selector: 'portfolio',
     templateUrl: 'app/portfolio/portfolio.component.html',
     styleUrls:  ['app/portfolio/portfolio.component.css'],
-    directives: [PortfolioDetailComponent]
+    directives: [ProjectDetailComponent]
 })
 
 export class PortfolioComponent implements OnInit {
@@ -36,6 +36,6 @@ export class PortfolioComponent implements OnInit {
     }
 
     gotoDetail() {
-        this._router.navigate(['PortfolioDetail', { id: this.selectedProject.id }]);
+        this._router.navigate(['ProjectDetail', { id: this.selectedProject.id }]);
     }
 }

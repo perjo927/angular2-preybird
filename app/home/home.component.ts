@@ -10,7 +10,7 @@ import { Project } from "../portfolio/project";
 })
 
 export class HomeComponent implements OnInit {
-    portfolios: Project[] = [];
+    portfolio: Project[] = [];
 
     constructor(
         private _router: Router,
@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this._portfolioService.getPortfolio()
-            .then(portfolios => this.portfolios = portfolios.slice(1,5));
+            .then(portfolio => this.portfolio = portfolio.slice(1,5));
     }
 
     gotoDetail(project: Project) {
-        let link = ['PortfolioDetail', { id: project.id }];
+        let link = ['ProjectDetail', { id: project.id }];
         this._router.navigate(link);
     }
 }

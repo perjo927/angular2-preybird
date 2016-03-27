@@ -5,12 +5,12 @@ import { PortfolioService } from './portfolio.service';
 
 
 @Component({
-    selector: 'portfolio-detail',
-    templateUrl: 'app/portfolio/portfolio-detail.component.html',
-    styleUrls: ['app/portfolio/portfolio-detail.component.css']
+    selector: 'project-detail',
+    templateUrl: 'app/portfolio/project-detail.component.html',
+    styleUrls: ['app/portfolio/project-detail.component.css']
 })
 
-export class PortfolioDetailComponent implements OnInit{
+export class ProjectDetailComponent implements OnInit{
     @Input()
     project: Project;
 

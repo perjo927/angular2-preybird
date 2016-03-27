@@ -3,7 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { HomeComponent } from './home/home.component';
 import { PortfolioService } from './portfolio/portfolio.service';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PortfolioDetailComponent } from "./portfolio/portfolio-detail.component";
+import { ProjectDetailComponent } from "./portfolio/project-detail.component";
 
 @Component({
     selector: 'cv-app',
@@ -24,9 +24,9 @@ import { PortfolioDetailComponent } from "./portfolio/portfolio-detail.component
         useAsDefault: true
     },
     {
-        path: '/portfolio-detail/:id',
-        name: 'PortfolioDetail',
-        component: PortfolioDetailComponent
+        path: '/project-detail/:id',
+        name: 'ProjectDetail',
+        component: ProjectDetailComponent
     },
     {
         path: '/portfolio',
