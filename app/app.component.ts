@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     title = "Preybird's heroes";
 
     getHeroes() {
-        this.heroes = this._heroService.getHeroes();
+        this._heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
     onSelect(hero: Hero) {
