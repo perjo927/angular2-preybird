@@ -1,13 +1,12 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
-import { Portfolio } from './portfolio';
-import { PortfolioService } from './portfolio.service';
-import {Portfolio} from "./portfolio";
+import { PortfolioService } from '../portfolio/portfolio.service';
+import { Portfolio } from "../portfolio/portfolio";
 
 @Component({
     selector: 'cv-home',
-    templateUrl: 'app/home.component.html',
-    styleUrls: ['app/home.component.css']
+    templateUrl: 'app/home/home.component.html',
+    styleUrls: ['app/home/home.component.css']
 })
 
 export class HomeComponent implements OnInit {

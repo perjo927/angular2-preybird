@@ -6,8 +6,8 @@ import { PortfolioService } from './portfolio.service';
 
 @Component({
     selector: 'portfolio-detail',
-    templateUrl: 'app/portfolio-detail.component.html',
-    styleUrls: ['app/portfolio-detail.component.css']
+    templateUrl: 'app/portfolio/portfolio-detail.component.html',
+    styleUrls: ['app/portfolio/portfolio-detail.component.css']
 })
 
 export class PortfolioDetailComponent implements OnInit{

@@ -10,8 +10,8 @@ import {Portfolio} from "./portfolio";
 
 @Component({
     selector: 'portfolio',
-    templateUrl: 'app/portfolio.component.html',
-    styleUrls:  ['app/portfolio.component.css'],
+    templateUrl: 'app/portfolio/portfolio.component.html',
+    styleUrls:  ['app/portfolio/portfolio.component.css'],
     directives: [PortfolioDetailComponent]
 })
 
