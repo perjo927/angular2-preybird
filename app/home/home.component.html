@@ -1,0 +1,9 @@
+<h3>Home</h3>
+
+<div class="grid grid-pad">
+    <div *ngFor="#project of portfolio" (click)="gotoDetail(project)" class="col-1-4">
+        <div class="module project">
+            <h4>{{project.title}}</h4>
+        </div>
+    </div>
+</div>
