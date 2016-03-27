@@ -2,19 +2,12 @@ import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 import { HeroService } from './hero.service';
 import { HeroesComponent } from './heroes.component';
-import { DashboardComponent } from './dashboard.component';
+import { HomeComponent } from './home.component';
 import {HeroDetailComponent} from "./hero-detail.component";
 
 @Component({
-    selector: 'ng2-preybird-app',
-    template: `
-        <h1>{{title}}</h1>
-        <nav>
-            <a [routerLink]="['Dashboard']">Dashboard</a>
-            <a [routerLink]="['Heroes']">Heroes</a>
-        </nav>
-        <router-outlet></router-outlet>
-    `,
+    selector: 'cv-app',
+    templateUrl: 'app/app.component.html',
     directives: [ROUTER_DIRECTIVES],
     providers: [
         ROUTER_PROVIDERS,
@@ -25,23 +18,23 @@ import {HeroDetailComponent} from "./hero-detail.component";
 
 @RouteConfig([
     {
+        path: '/detail/:id',
+        name: 'HeroDetail',
+        component: HeroDetailComponent
+    },
+    {
         path: '/heroes',
         name: 'Heroes',
         component: HeroesComponent
     },
     {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: DashboardComponent,
+        path: '/home',
+        name: 'Home',
+        component: HomeComponent,
         useAsDefault: true
-    },
-    {
-        path: '/detail/:id',
-        name: 'HeroDetail',
-        component: HeroDetailComponent
     }
 ])
 
 export class AppComponent {
-    title = "Preybird's Heroes";
+    title = "Programmer Per";
 }

@@ -4,12 +4,12 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
-    selector: 'my-dashboard',
-    templateUrl: 'app/dashboard.component.html',
-    styleUrls: ['app/dashboard.component.css']
+    selector: 'cv-home',
+    templateUrl: 'app/home.component.html',
+    styleUrls: ['app/home.component.css']
 })
 
-export class DashboardComponent implements OnInit {
+export class HomeComponent implements OnInit {
     heroes: Hero[] = [];
 
     constructor(
