@@ -1,4 +1,4 @@
-export interface Hero {
+export interface Portfolio {
     id: number;
     name: string;
 }

@@ -1,0 +1,14 @@
+<ul class="portfolios">
+    <li *ngFor="#portfolio of portfolios"
+        (click)="onSelect(portfolio)"
+        [class.selected]="portfolio === selectedPortfolio">
+        <span class="badge">{{portfolio.id}}</span> {{portfolio.name}}
+    </li>
+</ul>
+
+<div *ngIf="selectedPortfolio">
+    <h2>
+        {{selectedPortfolio.name | uppercase}} is what I want to see
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>

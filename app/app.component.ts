@@ -1,9 +1,9 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import { HeroService } from './hero.service';
-import { HeroesComponent } from './heroes.component';
+import { PortfolioService } from './portfolio.service';
+import { PortfolioComponent } from './portfolio.component';
 import { HomeComponent } from './home.component';
-import {HeroDetailComponent} from "./hero-detail.component";
+import {PortfolioDetailComponent} from "./portfolio-detail.component";
 
 @Component({
     selector: 'cv-app',
@@ -11,21 +11,21 @@ import {HeroDetailComponent} from "./hero-detail.component";
     directives: [ROUTER_DIRECTIVES],
     providers: [
         ROUTER_PROVIDERS,
-        HeroService
+        PortfolioService
     ],
     styleUrls: ['app/app.component.css'],
 })
 
 @RouteConfig([
     {
-        path: '/detail/:id',
-        name: 'HeroDetail',
-        component: HeroDetailComponent
+        path: '/portfolio-detail/:id',
+        name: 'PortfolioDetail',
+        component: PortfolioDetailComponent
     },
     {
-        path: '/heroes',
-        name: 'Heroes',
-        component: HeroesComponent
+        path: '/portfolio',
+        name: 'Portfolio',
+        component: PortfolioComponent
     },
     {
         path: '/home',
