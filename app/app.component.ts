@@ -1,6 +1,8 @@
 import {Component} from 'angular2/core'
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
+import {HeroService} from './hero.service';
+import {OnInit} from 'angular2/core';
 
 @Component({
     selector: 'ng2-preybird-app',
@@ -23,29 +25,26 @@ import {HeroDetailComponent} from './hero-detail.component';
         color: white;
       }
     `],
-    directives: [HeroDetailComponent]
+    directives: [HeroDetailComponent],
+    providers: [HeroService]
 })
 
-export class AppComponent {
-    public heroes = HEROES;
-    public title = "Preybird's heroes";
+export class AppComponent implements OnInit {
+    ngOnInit() {
+        this.getHeroes();
+    }
+
+    constructor(private _heroService: HeroService) { }
+
+    heroes : Hero[];
     selectedHero: Hero;
+    title = "Preybird's heroes";
+
+    getHeroes() {
+        this.heroes = this._heroService.getHeroes();
+    }
 
     onSelect(hero: Hero) {
         this.selectedHero = hero;
     }
 }
-
-var HEROES: Hero[] = [
-    { "id": 11, "name": "Jimmy Smith" },
-    { "id": 12, "name": "John Coltrane" },
-    { "id": 13, "name": "Miles Davis" },
-    { "id": 14, "name": "Aphex Twin" },
-    { "id": 15, "name": "Chemical Brothers" },
-    { "id": 16, "name": "Apollo 440" },
-    { "id": 17, "name": "Squarepusher" },
-    { "id": 18, "name": "Amon Tobin" },
-    { "id": 19, "name": "Joey DeFrancesco" },
-    { "id": 20, "name": "Wes Montgomery" }
-];
-
