@@ -7,9 +7,6 @@ import {OnInit} from 'angular2/core';
 @Component({
     selector: 'my-heroes',
     template: `
-    <h1>{{title}}</h1>
-
-    <h2>My Heroes</h2>
     <ul class="heroes">
         <li *ngFor="#hero of heroes"
             (click)="onSelect(hero)"
