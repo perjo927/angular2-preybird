@@ -3,6 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { HeroService } from './hero.service';
 import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component';
+import {HeroDetailComponent} from "./hero-detail.component";
 
 @Component({
     selector: 'ng2-preybird-app',
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard.component';
     providers: [
         ROUTER_PROVIDERS,
         HeroService
-    ]
+    ],
+    styleUrls: ['app/app.component.css'],
 })
 
 @RouteConfig([
@@ -33,6 +35,11 @@ import { DashboardComponent } from './dashboard.component';
         component: DashboardComponent,
         useAsDefault: true
     },
+    {
+        path: '/detail/:id',
+        name: 'HeroDetail',
+        component: HeroDetailComponent
+    }
 ])
 
 export class AppComponent {
