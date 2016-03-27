@@ -1,0 +1,10 @@
+<div *ngIf="card">
+    <h2>{{card.title}} details!</h2>
+    <div>
+        <label>id: </label>{{card.id}}</div>
+    <div>
+        <label>title: </label>
+        <input [(ngModel)]="card.title" placeholder="title" />
+    </div>
+    <button (click)="goBack()">Back</button>
+</div>

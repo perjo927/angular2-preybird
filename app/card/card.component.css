@@ -1,0 +1,16 @@
+label {
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+button:disabled {
+
+    cursor: auto;
+}
