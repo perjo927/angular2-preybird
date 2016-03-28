@@ -33,16 +33,6 @@
     padding-right: 20px;
 }
 
-.selected {
-    background-color: #CFD8DC;
-    color: white;
-}
-
-.selected:hover {
-    background-color: #BBD8DC;
-}
-
-
 .module {
     padding: 20px;
     text-align: center;
@@ -56,6 +46,15 @@
     background-color: #EEE;
     cursor: pointer;
     color: #607d8b;
+}
+
+.module.selected {
+    background-color: #CFD8DC;
+    color: white;
+}
+
+.module.selected:hover {
+    background-color: #BBD8DC;
 }
 
 .selected-item {

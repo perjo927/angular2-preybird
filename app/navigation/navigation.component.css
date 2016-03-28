@@ -34,6 +34,7 @@ nav .icon {
     fill: #777;
 }
 
+/* TODO: Off canvas menu */
 @media (min-width: 1000px) {
     .nav a {
         max-width: 500px;
