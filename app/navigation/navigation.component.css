@@ -1,18 +1,45 @@
+svg {
+    fill: green;
+    width: 2rem;
+    height: 2rem;
+}
+
 nav {
+    background: #eee;
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
-
 nav a {
+    padding: 1.25rem 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    color: #333;
+}
+nav a:hover, nav a:focus {
+    background: #ccc;
+    color: black;
+}
+nav a:hover svg, nav a:focus svg {
+    fill: green;
+}
+nav .icon {
+    margin-right: 1rem;
+    fill: #777;
 }
 
-nav a:visited, a:link {
-    color: #607D8B;
-}
-
-nav a:hover {
-    color: #039be5;
-}
-
-nav a.router-link-active {
-    color: #039be5;
+@media (min-width: 1000px) {
+    .nav a {
+        max-width: 500px;
+        font-size: 2rem;
+    }
+    .nav .icon {
+        width: 2rem;
+        height: 2rem;
+    }
 }

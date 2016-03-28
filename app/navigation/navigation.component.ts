@@ -18,7 +18,10 @@ export class NavigationComponent implements OnInit {
     }
 
     private getNavigationItems() {
-        this._navigationService.getNavigationItems().then(navigation => this.navigation = navigation);
+        this._navigationService.getNavigationItems().then(navigation => this.navigation = navigation.filter(
+            navigation => navigation.link !== null)
+        );
+
     }
 
     ngOnInit() {

@@ -1,3 +1,7 @@
+html {
+    font-size: 12px;
+}
+
 h1 {
     color: #369;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +14,7 @@ h2, h3 {
 }
 
 body {
-    margin: 2em;
+    background: #0b0b0b;
 }
 
 body, input[text], button {
@@ -20,5 +24,5 @@ body, input[text], button {
 
 /* everywhere else */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* TODO: Open sans, Press 2 Play */
 }
