@@ -21,5 +21,4 @@ import { PortfolioService } from './portfolio/portfolio.service';
 @RouteConfig(NAVIGATION)
 
 export class AppComponent {
-    title = "Programmer Per";
 }

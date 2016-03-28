@@ -4,6 +4,7 @@ import { Project } from './project';
 import { ProjectDetailComponent } from './project-detail.component';
 import { PortfolioService } from './portfolio.service';
 import { OnInit } from 'angular2/core';
+import { CardViewer } from '../card/card-viewer';
 
 @Component({
     selector: 'portfolio',
@@ -12,9 +13,9 @@ import { OnInit } from 'angular2/core';
     directives: [ProjectDetailComponent]
 })
 
-export class PortfolioComponent implements OnInit {
-    portfolio : Project[];
-    selectedProject: Project;
+export class PortfolioComponent implements OnInit, CardViewer {
+    collection: Project[];
+    selectedItem: Project;
 
     constructor(
         private _router: Router,
@@ -25,16 +26,17 @@ export class PortfolioComponent implements OnInit {
         this.getPortfolio();
     }
 
-    onSelect(project: Project) {
-        this.selectedProject = project;
+    onSelect(item: Project) {
+        this.selectedItem = item;
     }
 
     getPortfolio() {
-        this._portfolioService.getPortfolio().then(portfolio => this.portfolio = portfolio);
+        this._portfolioService.getPortfolio().then(portfolio => this.collection = portfolio);
     }
 
-    // TODO: Implement in (card) interface
     gotoDetail() {
-        this._router.navigate(['ProjectDetail', { id: this.selectedProject.id }]);
+        this._router.navigate(['ProjectDetail', { id: this.selectedItem.id }]);
     }
 }
+
+
