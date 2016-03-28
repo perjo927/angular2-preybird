@@ -1,20 +1,17 @@
 <div class="grid grid-pad">
-    <div *ngFor="#project of collection" (click)="onSelect(project)" class="col-1-4">
+    <div *ngFor="#project of collection"
+         (click)="onSelect(project)"
+         class="col-1-4"
+         [class.selected]="project === selectedItem">
+
         <div class="module project">
             <h4>{{project.title}}</h4>
         </div>
     </div>
 </div>
 
-<ul class="portfolio">
-    <li *ngFor="#project of collection"
-        (click)="onSelect(project)"
-        [class.selected]="project === selectedItem">
-        <span class="badge">{{project.id}}</span> {{project.title}}
-    </li>
-</ul>
 
-<div *ngIf="selectedItem">
+<div *ngIf="selectedItem" class="selected-item">
     <h2>
         {{selectedItem.title | uppercase}} is what I want to see
     </h2>

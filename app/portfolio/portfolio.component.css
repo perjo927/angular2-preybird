@@ -1,91 +1,16 @@
 
-.portfolio {
-    float: left;
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 24em;
-}
-.portfolio li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-}
-.portfolio li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-}
-.portfolio li.selected:hover {
-    background-color: #BBD8DC;
-    color: white;
-}
-.portfolio .text {
-    position: relative;
-    top: -3px;
-}
-.portfolio {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 24em;
-}
-.portfolio li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-}
-.portfolio li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-}
-.portfolio li.selected {
-    background-color: #CFD8DC;
-    color: white;
-}
-
-.portfolio li.selected:hover {
-    background-color: #BBD8DC;
-}
-.portfolio .text {
-    position: relative;
-    top: -3px;
-}
-.portfolio .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-}
-
-
-[class*='col-'] {
-    float: left;
-}
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+/* TODO: Remove grid classes - use flex box */
+
+[class*='col-'] {
+    float: left;
+}
+
 [class*='col-'] {
     padding-right: 20px;
     padding-bottom: 20px;
@@ -93,12 +18,30 @@
 [class*='col-']:last-of-type {
     padding-right: 0;
 }
+
 .grid {
     margin: 0;
 }
 .col-1-4 {
     width: 25%;
 }
+
+.grid-pad {
+    padding: 10px 0;
+}
+.grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+
+.selected {
+    background-color: #CFD8DC;
+    color: white;
+}
+
+.selected:hover {
+    background-color: #BBD8DC;
+}
+
 
 .module {
     padding: 20px;
@@ -114,12 +57,11 @@
     cursor: pointer;
     color: #607d8b;
 }
-.grid-pad {
-    padding: 10px 0;
+
+.selected-item {
+    clear: left;
 }
-.grid-pad > [class*='col-']:last-of-type {
-    padding-right: 20px;
-}
+
 @media (max-width: 600px) {
     .module {
         font-size: 10px;
