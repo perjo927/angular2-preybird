@@ -16,4 +16,4 @@ such a manner.
 _Coming soon_
 
 ## CI
-__Coming soon__
+_Coming soon_
