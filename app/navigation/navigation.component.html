@@ -1,10 +1,4 @@
-<nav>
-    <!-- TODO: *ngFor , service-->
-    <a [routerLink]="['Home']">Home</a>
-    <a [routerLink]="['Home']">Per</a>
-    <a [routerLink]="['Home']">Skills</a>
-    <a [routerLink]="['Home']">Social</a>
-    <a [routerLink]="['Portfolio']">Portfolio</a>
-    <a [routerLink]="['Home']">Blog</a>
+<nav *ngFor="#item of navigation">
+    <a *ngIf="item.link" [routerLink]="item.link">{{item.name}}</a>
 </nav>
 <router-outlet></router-outlet>

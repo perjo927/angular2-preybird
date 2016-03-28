@@ -1,19 +1,18 @@
 import {Injectable} from 'angular2/core';
-import {NAVIGATION} from './mock-navigation';
+import {NAVIGATION} from './navigation.data';
 import { Navigation } from "./navigation";
+import { INavigationService } from "./navigation.interface";
 
 @Injectable()
-export class NavigationService {
+export class NavigationService implements INavigationService {
 
-    // TODO
+    getNavigationItems(): Promise<Navigation[]> {
+        return Promise.resolve(NAVIGATION);
+    }
 
-    //getNavigationItems(): Promise<Navigation[]> {
-    //    return Promise.resolve(NAVIGATION);
-    //}
-    //
-    //getNavigationItem(id: number): Promise<Navigation> {
-    //    return Promise.resolve(NAVIGATION).then(
-    //        navigation => navigation.filter(navigation => navigation.id === id)[0]
-    //    );
-    //}
+    getNavigationItem(name: string): Promise<Navigation> {
+        return Promise.resolve(NAVIGATION).then(
+            navigation => navigation.filter(navigation => navigation.name === name)[0]
+        );
+    }
 }

@@ -14,13 +14,15 @@ export class HomeComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _portfolioService: PortfolioService) { }
+        private _portfolioService: PortfolioService) {
+    }
 
     ngOnInit() {
         this._portfolioService.getPortfolio()
             .then(portfolio => this.portfolio = portfolio.slice(1,5));
     }
 
+    // TODO: Implement in (card) interface
     gotoDetail(project: Project) {
         let link = ['ProjectDetail', { id: project.id }];
         this._router.navigate(link);

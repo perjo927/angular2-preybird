@@ -33,6 +33,7 @@ export class PortfolioComponent implements OnInit {
         this._portfolioService.getPortfolio().then(portfolio => this.portfolio = portfolio);
     }
 
+    // TODO: Implement in (card) interface
     gotoDetail() {
         this._router.navigate(['ProjectDetail', { id: this.selectedProject.id }]);
     }

@@ -1,7 +1,7 @@
 export interface Navigation {
     path: string;
-    link: string;
     name: string;
+    link: any,
     component: any;
     useAsDefault: boolean;
 }
