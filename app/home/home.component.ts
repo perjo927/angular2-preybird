@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 
 @Component({
-    selector: 'cv-home',
+    selector: 'programmer-per-home',
     templateUrl: 'app/home/home.component.html',
     styleUrls: ['app/home/home.component.css']
 })
