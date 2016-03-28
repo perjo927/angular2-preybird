@@ -1,84 +1,24 @@
 import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import { HomeComponent } from './home/home.component';
+import { RouteConfig, ROUTER_PROVIDERS } from 'angular2/router';
+import { NAVIGATION } from './navigation/navigation.data';
+import { NavigationComponent } from "./navigation/navigation.component";
+import { NavigationService } from "./navigation/navigation.service";
 import { PortfolioService } from './portfolio/portfolio.service';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ProjectDetailComponent } from "./portfolio/project-detail.component";
+
 
 @Component({
-    selector: 'cv-app',
+    selector: 'programmer-per-app',
     templateUrl: 'app/app.component.html',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [NavigationComponent],
     providers: [
         ROUTER_PROVIDERS,
-        PortfolioService
+        PortfolioService,
+        NavigationService
     ],
     styleUrls: ['app/app.component.css'],
 })
 
-@RouteConfig([
-    {
-        path: '/home',
-        name: 'Home',
-        component: HomeComponent,
-        useAsDefault: true
-    },
-    {
-        path: '/project-detail/:id',
-        name: 'ProjectDetail',
-        component: ProjectDetailComponent
-    },
-    {
-        path: '/portfolio',
-        name: 'Portfolio',
-        component: PortfolioComponent
-    },
-    //{
-    //    path: '/social-detail/:id',
-    //    name: 'SocialDetail',
-    //    component: SocialDetailComponent
-    //},
-    //{
-    //    path: '/social',
-    //    name: 'Social',
-    //    component: SocialComponent
-    //},
-
-    //{
-    //    path: '/cv-detail/:id',
-    //    name: 'CvDetail',
-    //    component: CvDetailComponent
-    //},
-    //{
-    //    path: '/cv',
-    //    name: 'Cv',
-    //    component: CvComponent
-    //},
-
-    //{
-    //    path: '/skills-detail/:id',
-    //    name: 'SkillsDetail',
-    //    component: SkillsDetailComponent
-    //},
-    //{
-    //    path: '/skills',
-    //    name: 'Skills',
-    //    component: SkillsComponent
-    //},
-
-    //{
-    //    path: '/per',
-    //    name: 'Per',
-    //    component: PerComponent
-    //},
-
-    //{
-    //    path: '/blog',
-    //    name: 'Blog',
-    //    component: BlogComponent
-    //}
-])
+@RouteConfig(NAVIGATION)
 
 export class AppComponent {
-    title = "Programmer Per";
 }
