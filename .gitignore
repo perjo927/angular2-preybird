@@ -6,5 +6,6 @@ jspm_packages
 bower_components
 typings
 
-*.js
+app/**/*.js
 *.map
+app/**/*.css
