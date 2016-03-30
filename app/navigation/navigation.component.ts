@@ -1,9 +1,9 @@
-import { Component, OnInit, AfterViewInit, ElementRef, Inject } from 'angular2/core';
+import { Component, OnInit} from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
 import { Navigation } from './navigation';
 import { NavigationService } from './navigation.service';
 import { IconComponent } from '../icon/icon.component';
-
+import { OnSelect } from "../shared/lib";
 
 @Component({
     selector: 'navigation',
@@ -12,15 +12,12 @@ import { IconComponent } from '../icon/icon.component';
     styleUrls: ['app/navigation/navigation.component.css']
 })
 
-export class NavigationComponent implements OnInit, AfterViewInit {
-    private elementRef: ElementRef;
-
+export class NavigationComponent implements OnInit, OnSelect {
     navigation: Navigation[];
 
+    /* Get route on every route change */
     constructor(
-        @Inject(ElementRef) elementRef: ElementRef,
         private _navigationService: NavigationService) {
-        this.elementRef = elementRef;
     }
 
     private getNavigationItems() {
@@ -29,11 +26,15 @@ export class NavigationComponent implements OnInit, AfterViewInit {
         );
     }
 
+    getRoute(): Navigation {
+        return this._navigationService.getRoute();
+    }
+
     ngOnInit() {
         this.getNavigationItems();
     }
 
-    ngAfterViewInit() {
-        // TODO
+    onSelect(item: Navigation) {
+        this._navigationService.setNavigationItem(item);
     }
 }

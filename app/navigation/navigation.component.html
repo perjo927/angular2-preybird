@@ -2,11 +2,15 @@
 <label for="hamburger" class="hamburger-label" role="button">&#xf0c9;</label>
 
 <nav role='navigation' class="sidebar">
-    <a *ngFor="#item of navigation" [routerLink]="item.link" >
-        <programmer-per-icon class="{{item.name}}"></programmer-per-icon>
+    <a *ngFor="#item of navigation"
+       [routerLink]="item.link"
+       (click)="onSelect(item)">
+        <programmer-per-icon
+                class="{{item.name}}"
+                [class.selected]="item === getRoute()">
+        </programmer-per-icon>
 
-        <!-- TODO: set selected class -->
-        <span class="{{item.name}}">
+        <span class="{{item.name}}" [class.selected]="item === getRoute()">
             {{item.name}}
         </span>
     </a>

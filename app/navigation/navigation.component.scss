@@ -51,7 +51,7 @@ nav {
       }
     }
 
-    &:focus {
+    &:focus, .selected {
       opacity: 1;
       font-weight: 100;
 

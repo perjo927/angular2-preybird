@@ -22,7 +22,6 @@ export class ProjectDetailComponent extends CardComponent implements OnInit {
         super();
     }
 
-
     ngOnInit() {
         let id = Number(this._routeParams.get('id'));
         this._portfolioService.getProject(id)
