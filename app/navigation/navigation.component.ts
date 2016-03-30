@@ -2,10 +2,11 @@ import { Component, OnInit } from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
 import { Navigation } from './navigation';
 import { NavigationService } from './navigation.service';
+import { IconComponent } from '../icon/icon.component';
 
 @Component({
     selector: 'navigation',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, IconComponent],
     templateUrl: 'app/navigation/navigation.component.html',
     styleUrls: ['app/navigation/navigation.component.css']
 })
@@ -21,7 +22,6 @@ export class NavigationComponent implements OnInit {
         this._navigationService.getNavigationItems().then(navigation => this.navigation = navigation.filter(
             navigation => navigation.link !== null)
         );
-
     }
 
     ngOnInit() {

@@ -9,6 +9,7 @@ nav {
 }
 
 nav a {
+    transition: color 0.67s ease, font-weight 0.67s ease;
     display: flex;
     align-items: flex-start;
     padding: 1.25rem 0.5rem;
@@ -22,25 +23,23 @@ nav a:hover {
 }
 nav a:focus {
     color: #0b97a0;
+    font-weight: 900;
 }
 
-nav .icon {
-    visibility: hidden;
+nav programmer-per-icon {
+    transition: color 0.67s ease;
+    color: #0b0b0b;
+    width: 1rem;
+    height: 1rem;
     margin-right: 0.7rem;
-    fill: #777;
 }
 
-
-nav a:hover .icon, nav a:focus .icon {
-    visibility: visible;
+nav a:focus programmer-per-icon{
+    color: #a7a612;
 }
 
-nav a:focus .icon{
-    fill: #bab912;
-}
-
-nav .icon:hover {
-    fill: #fffe13;
+nav a:hover programmer-per-icon {
+    color: #fbff59;
 }
 
 nav span {
@@ -52,13 +51,10 @@ nav span {
 /* TODO: transitions */
 
 /* TODO: Off canvas menu + make work */
-@media (min-width: 1000px) {
-    .nav a {
-        max-width: 500px;
-        font-size: 2rem;
-    }
-    .nav .icon {
-        width: 1rem;
-        height: 1rem;
+@media (max-width: 700px) {
+    nav {
+        width: 200px;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }

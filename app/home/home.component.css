@@ -6,9 +6,11 @@ h4 {
     position: relative;
 }
 
-.icon {
-    display: inline-block;
-    width: 10rem;
-    height: 10rem;
-    fill: currentColor;
+programmer-per-icon {
+    transition: color 0.66s ease;
+    color: green;
+}
+
+programmer-per-icon:hover {
+    color: yellow;
 }
