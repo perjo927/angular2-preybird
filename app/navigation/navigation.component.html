@@ -1,6 +1,6 @@
 <nav>
     <a *ngFor="#item of navigation" [routerLink]="item.link" >
-        <programmer-per-icon></programmer-per-icon>
+        <programmer-per-icon class="{{item.name}}"></programmer-per-icon>
 
         <span class="{{item.name}}">
             {{item.name}}
