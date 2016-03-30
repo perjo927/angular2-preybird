@@ -8,3 +8,4 @@ typings
 
 *.js
 *.map
+app/*.css
