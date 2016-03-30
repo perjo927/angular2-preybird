@@ -1,6 +1,6 @@
 {
   "name": "ng2-preybird",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "start": "concurrently \"npm run css\" \"npm run scss:w\" \"npm run tsc:w\" \"npm run lite\" ",
     "css": "gulp sass",
