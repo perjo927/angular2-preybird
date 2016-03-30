@@ -1,7 +1,11 @@
-<nav>
+<input id="hamburger" type="checkbox" class="hamburger-checkbox">
+<label for="hamburger" class="hamburger-label" role="button">&#xf0c9;</label>
+
+<nav role='navigation' class="sidebar">
     <a *ngFor="#item of navigation" [routerLink]="item.link" >
         <programmer-per-icon class="{{item.name}}"></programmer-per-icon>
 
+        <!-- TODO: set selected class -->
         <span class="{{item.name}}">
             {{item.name}}
         </span>

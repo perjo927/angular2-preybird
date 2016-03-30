@@ -1,3 +1,5 @@
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
 //colors
 $color_lemon_ginger_approx: #9e9c2b;
 $cod_gray: #0b0b0b;
@@ -23,8 +25,6 @@ $font_3: 'sans-serif';
 }
 
 nav {
-  animation-duration: 3s;
-  animation-name: slidein;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -53,7 +53,7 @@ nav {
 
     &:focus {
       opacity: 1;
-      font-weight: 900;
+      font-weight: 100;
 
       programmer-per-icon {
         opacity: 1;
@@ -77,15 +77,70 @@ nav {
   }
 }
 
-@media(max-width: 700px) {
+
+/* Media */
+@media(min-width: 701px) {
   nav {
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 150px;
-    border-right: 5px dotted $color_lemon_ginger_approx;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+  .hamburger-checkbox, .hamburger-label {
+    display: none;
   }
 }
 
+@media(max-width: 700px) {
+
+  nav {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: all .3s;
+
+    a {
+      justify-content: center;
+    }
+  }
+
+  section {
+    margin-top: 3.5rem;
+  }
+
+  .hamburger-checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .hamburger-label {
+    transition: all cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    font-size: 42px ;
+    font-family: fontawesome;
+    cursor: pointer;
+  }
+
+  .hamburger-checkbox:checked ~ .hamburger-label {
+    transform: rotate(90deg);
+    color: white;
+  }
+
+  .hamburger-checkbox:checked ~ nav {
+    //flex-wrap: wrap;
+    flex-direction: column;
+    width: 66%;
+    height: auto;
+    border-right: 5px dotted $color_lemon_ginger_approx;
+  }
+
+
+}
+
+/* Manipulation */
 $colors: (
         Home: #f20012,
         Per: #00a9ff,
