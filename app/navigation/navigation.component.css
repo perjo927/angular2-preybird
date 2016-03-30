@@ -1,38 +1,55 @@
 nav {
-    background: #0b0b0b;
-    border-bottom: 5px dotted white;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: #0b0b0b;
+    border-bottom: 5px dotted #9e9c2b;
 }
 
 nav a {
-    padding: 1.25rem 0.5rem;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-decoration: none;
     display: flex;
     align-items: flex-start;
-    color: #333;
+    padding: 1.25rem 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b5b5b5;
 }
 
-nav a:hover, nav a:focus {
-    background: #ccc;
-    color: black;
+nav a:hover {
+    color: #42b4d3;
 }
-
-nav a:hover svg, nav a:focus svg {
-    fill: green;
+nav a:focus {
+    color: #0b97a0;
 }
 
 nav .icon {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
+    visibility: hidden;
+    margin-right: 0.7rem;
     fill: #777;
 }
+
+
+nav a:hover .icon, nav a:focus .icon {
+    visibility: visible;
+}
+
+nav a:focus .icon{
+    fill: #bab912;
+}
+
+nav .icon:hover {
+    fill: #fffe13;
+}
+
+nav span {
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* TODO: transitions */
 
 /* TODO: Off canvas menu + make work */
 @media (min-width: 1000px) {
