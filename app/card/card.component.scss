@@ -1,0 +1,16 @@
+//colors
+$color_iron_approx: #cfd8dc;
+
+label {
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+    &:hover {
+        background-color: $color_iron_approx;
+    }
+    &:disabled {
+        cursor: auto;
+    }
+}

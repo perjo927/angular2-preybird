@@ -5,6 +5,7 @@ import { INavigationService } from "./navigation.interface";
 
 @Injectable()
 export class NavigationService implements INavigationService {
+    selectedRoute: Navigation;
 
     getNavigationItems(): Promise<Navigation[]> {
         return Promise.resolve(NAVIGATION);
@@ -14,5 +15,13 @@ export class NavigationService implements INavigationService {
         return Promise.resolve(NAVIGATION).then(
             navigation => navigation.filter(navigation => navigation.name === name)[0]
         );
+    }
+
+    getRoute(): Navigation {
+        return this.selectedRoute;
+    }
+
+    setNavigationItem(route: Navigation): void {
+        this.selectedRoute = route;
     }
 }

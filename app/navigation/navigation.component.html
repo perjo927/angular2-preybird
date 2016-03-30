@@ -1,5 +1,21 @@
-<nav *ngFor="#item of navigation">
-    <a *ngIf="item.link" [routerLink]="item.link">{{item.name}}</a>
+<input id="hamburger" type="checkbox" class="hamburger-checkbox">
+<label for="hamburger" class="hamburger-label" role="button">&#xf0c9;</label>
+
+<nav role='navigation' class="sidebar">
+    <a *ngFor="#item of navigation"
+       [routerLink]="item.link"
+       (click)="onSelect(item)">
+        <programmer-per-icon
+                class="{{item.name}}"
+                [class.selected]="item === getRoute()">
+        </programmer-per-icon>
+
+        <span class="{{item.name}}" [class.selected]="item === getRoute()">
+            {{item.name}}
+        </span>
+    </a>
 </nav>
 
-<router-outlet></router-outlet>
+<section>
+    <router-outlet></router-outlet>
+</section>

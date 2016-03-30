@@ -1,7 +1,5 @@
-import { Component, Input, OnInit } from 'angular2/core';
-import { RouteParams } from 'angular2/router';
+import { Component, Input } from 'angular2/core';
 import { Card } from './card';
-import { CardService } from './card.service';
 
 
 @Component({

@@ -2,7 +2,9 @@
   "name": "ng2-preybird",
   "version": "0.0.8",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "concurrently \"npm run css\" \"npm run scss:w\" \"npm run tsc:w\" \"npm run lite\" ",
+    "css": "gulp sass",
+    "scss:w": "gulp sass:watch",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
@@ -21,8 +23,10 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "gulp-sass": "^2.2.0",
     "lite-server": "^2.1.0",
+    "node-sass": "^3.4.2",
     "typescript": "^1.8.9",
-    "typings":"^0.7.9"
+    "typings": "^0.7.9"
   }
 }
