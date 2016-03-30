@@ -1,31 +1,37 @@
+//colors
+$color_smalt_blue_approx: #607d8b;
+$color_gallery_approx: #eee;
+$color_iron_approx: #cfd8dc;
+$color_celeste_approx: #ccc;
+
+//fonts
+$font_0: Arial;
+
 label {
     width: 3em;
     margin: .5em 0;
-    color: #607D8B;
+    color: $color_smalt_blue_approx;
     font-weight: bold;
 }
-
 input {
     height: 2em;
     font-size: 1em;
     padding-left: .4em;
 }
-
 button {
     margin-top: 20px;
-    font-family: Arial;
-    background-color: #eee;
+    font-family: $font_0;
+    background-color: $color_gallery_approx;
     border: none;
     padding: 5px 10px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 4px;
     cursor: hand;
-}
-
-button:hover {
-    background-color: #cfd8dc;
-}
-
-button:disabled {
-    background-color: #eee;
-    color: #ccc;
+    &:hover {
+        background-color: $color_iron_approx;
+    }
+    &:disabled {
+        background-color: $color_gallery_approx;
+        color: $color_celeste_approx;
+    }
 }

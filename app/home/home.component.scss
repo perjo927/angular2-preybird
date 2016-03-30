@@ -1,29 +1,40 @@
+//colors
+$color_green_approx: #01be01;
+$color_japanese_laurel_approx: #196e07;
+
+//fonts
+$font_0: Press Start 2P;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+
 @keyframes fadein {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
-p, a {
+p {
     animation-name: fadein;
     animation-duration: 10s;
 }
 
 a {
-    color: #01be01;
+    animation-name: fadein;
+    animation-duration: 10s;
+    color: $color_green_approx;
     font-weight: bold;
     text-decoration: none;
 }
 
 h3 {
-    text-align: center; margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
 }
 
-/* Type effect */
 @keyframes type {
     0% {
         width: 0;
@@ -35,14 +46,16 @@ h3 {
         width: 100%;
     }
 }
-
-@keyframes blink{
-    to{opacity: .0;}
+@keyframes blink {
+    to {
+        opacity: .0;
+    }
 }
 
 .home-title {
-    text-shadow: 0.5rem 0.2rem 2.5rem #196e07;
-    color: #01be01;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 0.5rem 0.2rem 2.5rem $color_japanese_laurel_approx;
+    color: $color_green_approx;
 }
 
 .type-text {
@@ -57,6 +70,6 @@ h3 {
 }
 
 span {
-    color: #01be01;
-    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    color: $color_green_approx;
+    font-family: $font_0, $font_1, $font_2, $font_3;
 }

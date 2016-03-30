@@ -1,72 +1,74 @@
+//colors
+$color_gallery_approx: #eee;
+$color_smalt_blue_approx: #607d8b;
+$color_iron_approx: #cfd8dc;
+$white: white;
+$color_ziggurat_approx: #bbd8dc;
 
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+* {
+    //Instead of the line below you could use @include box-sizing($bs)
     box-sizing: border-box;
+    &:after {
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+    &:before {
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
 }
-
-/* TODO: Remove grid classes - use flex box */
-
 [class*='col-'] {
     float: left;
-}
-
-[class*='col-'] {
     padding-right: 20px;
     padding-bottom: 20px;
+    &:last-of-type {
+        padding-right: 0;
+    }
 }
-[class*='col-']:last-of-type {
-    padding-right: 0;
-}
-
 .grid {
     margin: 0;
 }
 .col-1-4 {
     width: 25%;
 }
-
 .grid-pad {
     padding: 10px 0;
+    > [class*='col-']:last-of-type {
+        padding-right: 20px;
+    }
 }
-.grid-pad > [class*='col-']:last-of-type {
-    padding-right: 20px;
-}
-
 .module {
     padding: 20px;
     text-align: center;
-    color: #eee;
+    color: $color_gallery_approx;
     max-height: 120px;
     min-width: 120px;
-    background-color: #607D8B;
+    background-color: $color_smalt_blue_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 2px;
+    &:hover {
+        background-color: $color_gallery_approx;
+        cursor: pointer;
+        color: $color_smalt_blue_approx;
+    }
+    &.selected {
+        background-color: $color_iron_approx;
+        color: $white;
+        &:hover {
+            background-color: $color_ziggurat_approx;
+        }
+    }
 }
-.module:hover {
-    background-color: #EEE;
-    cursor: pointer;
-    color: #607d8b;
-}
-
-.module.selected {
-    background-color: #CFD8DC;
-    color: white;
-}
-
-.module.selected:hover {
-    background-color: #BBD8DC;
-}
-
 .selected-item {
     clear: left;
 }
-
-@media (max-width: 600px) {
+@media(max-width: 600px) {
     .module {
         font-size: 10px;
-        max-height: 75px; }
+        max-height: 75px;
+    }
 }
-@media (max-width: 1024px) {
+@media(max-width: 1024px) {
     .grid {
         margin: 0;
     }
