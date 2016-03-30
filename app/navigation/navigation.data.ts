@@ -21,6 +21,14 @@ export var NAVIGATION: Navigation[] = [
     },
 
     {
+        path: '/per',
+        name: 'Per',
+        link: ['Per'],
+        component: AboutComponent,
+        "useAsDefault": false
+    },
+
+    {
         path: '/project-detail/:id',
         name: 'ProjectDetail',
         link: null,
@@ -51,21 +59,6 @@ export var NAVIGATION: Navigation[] = [
     },
 
     {
-        path: '/cv-detail/:id',
-        name: 'CvDetail',
-        link: null,
-        component: CvDetailComponent,
-        "useAsDefault": false
-    },
-    {
-        path: '/cv',
-        name: 'Cv',
-        link: ['Cv'],
-        component: CvComponent,
-        "useAsDefault": false
-    },
-
-    {
         path: '/skills-detail/:id',
         name: 'SkillsDetail',
         link: null,
@@ -81,10 +74,17 @@ export var NAVIGATION: Navigation[] = [
     },
 
     {
-        path: '/per',
-        name: 'Per',
-        link: ['Per'],
-        component: AboutComponent,
+        path: '/cv-detail/:id',
+        name: 'CvDetail',
+        link: null,
+        component: CvDetailComponent,
+        "useAsDefault": false
+    },
+    {
+        path: '/cv',
+        name: 'Cv',
+        link: ['Cv'],
+        component: CvComponent,
         "useAsDefault": false
     },
 
