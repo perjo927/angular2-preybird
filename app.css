@@ -22,16 +22,20 @@ body, input[text], button {
 h1 {
     color: #369;
     font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-h2, h3 {
+h2, h3, h4 {
     color: #444;
     font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
 }

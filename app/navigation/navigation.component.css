@@ -66,13 +66,12 @@ nav span {
     font-size: 1rem;
 }
 
-/* TODO: transitions */
-
 /* TODO: Off canvas menu + make work */
 @media (max-width: 700px) {
     nav {
-        width: 200px;
         flex-wrap: wrap;
         flex-direction: column;
+        width: 150px;
+        border-right: 5px dotted #9e9c2b;
     }
 }

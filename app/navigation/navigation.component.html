@@ -2,7 +2,7 @@
     <a *ngFor="#item of navigation" [routerLink]="item.link">
         <programmer-per-icon></programmer-per-icon>
 
-        <span>
+        <span id="{{item.name}}">
             {{item.name}}
         </span>
     </a>
