@@ -10,9 +10,10 @@ describe('Given that I have an NavigationComponent', () => {
     describe('When I provide it to my component', () => {
         beforeEach(() => {
             component = new NavigationComponent(new mocks.mockService());
+            component.ngOnInit();
         });
 
-        it('Then it must contain a Navigation array', () => expect(component).toBeDefined());
+        it('Then it must contain a Navigation array', () => expect(component.navigation).toBeDefined());
     });
 
     describe('When I call onSelect with the /test route', () => {
