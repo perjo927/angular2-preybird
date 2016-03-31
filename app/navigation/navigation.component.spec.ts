@@ -9,10 +9,12 @@ describe('Given that I have an NavigationComponent', () => {
 
     describe('When I provide it to my component', () => {
         beforeEach(() => {
-            component = new NavigationComponent(new mocks.mockService());
+            let service = new mocks.mockService();
+            component = new NavigationComponent(service);
             component.ngOnInit();
         });
 
+        // TODO: Support async
         it('Then it must contain a Navigation array', () => expect(component.navigation).toBeDefined());
     });
 

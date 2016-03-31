@@ -15,7 +15,7 @@ import { OnSelect } from "../shared/lib";
 })
 
 export class NavigationComponent implements OnInit, OnSelect {
-    navigation: Navigation[];
+    navigation: Navigation[] = null; // TODO: No default value
 
     /* TODO: Get route on every route change */
     constructor(
