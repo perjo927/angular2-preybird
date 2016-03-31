@@ -38,8 +38,9 @@
 
             // #3. Import the spec files explicitly
             Promise.all([
-                        System.import('app/card/card.spec')
-                        //System.import('app/etc/..')
+                        System.import('app/card/card.component.spec'),
+                        System.import('app/cv/cv.component.spec'),
+                        System.import('app/cv/cv-detail.component.spec')
                     ])
 
                     //     wait for all imports to load ...

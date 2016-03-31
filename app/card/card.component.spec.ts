@@ -1,5 +1,4 @@
 import { CardComponent } from 'app/card/card.component';
-import {Card} from "app/card/card";
 
 describe('Given that I have a CardComponent', () => {
     let cardComponent = new CardComponent();
