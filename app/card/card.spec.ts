@@ -1,9 +1,10 @@
-import { CardComponent } from 'card.component';
+import { CardComponent } from 'app/card/card.component';
+import {Card} from "app/card/card";
 
 describe('Given that I have a CardComponent', () => {
     let cardComponent = new CardComponent();
 
-    describe('Then it must have a card property', () => {
-        expect(cardComponent.card).toBeNull();
+    describe('And I use it in my class', () => {
+        it('Then it must be defined', () => expect(cardComponent).toBeDefined());
     });
 });
