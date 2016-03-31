@@ -1,7 +1,6 @@
 import { Component, Input } from 'angular2/core';
 import { Card } from './card';
 
-
 @Component({
     selector: 'card',
     templateUrl: 'app/card/card.component.html',
