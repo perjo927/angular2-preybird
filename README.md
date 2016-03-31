@@ -2,7 +2,8 @@
 
 This is a project for presenting me, "[Per the Programmer](http://www.programmerper.com)".
 
-The application is built with __Angular 2__, __TypeScript__, __SASS__ and tested with __Jasmine__.
+The application is built with __Angular 2__, __TypeScript__, __SASS__ and tested with __Jasmine__ in a behaviour-driven
+manner.
  _More to come ..._
 
 I believe in the future of Semantic Web Components, modular and testable. My intention is to build this app in 

@@ -1,9 +1,8 @@
-import { Component } from 'angular2/core'
+import { Component, OnInit } from 'angular2/core'
 import { Router } from 'angular2/router';
 import { Project } from './project';
 import { ProjectDetailComponent } from './project-detail.component';
 import { PortfolioService } from './portfolio.service';
-import { OnInit } from 'angular2/core';
 import { CardViewer } from '../card/card-viewer';
 import { OnSelect } from "../shared/lib";
 
@@ -14,7 +13,7 @@ import { OnSelect } from "../shared/lib";
     directives: [ProjectDetailComponent]
 })
 
-export class PortfolioComponent implements OnInit, CardViewer, OnSelect {
+export class PortfolioComponent implements OnInit, OnSelect, CardViewer {
     collection: Project[];
     selectedItem: Project;
 

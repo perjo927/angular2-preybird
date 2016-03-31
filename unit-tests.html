@@ -37,13 +37,17 @@
             });
 
             // #3. Import the spec files explicitly
+            // TODO: Automate
             Promise.all([
                         System.import('app/card/card.component.spec'),
                         System.import('app/cv/cv.component.spec'),
-                        System.import('app/cv/cv-detail.component.spec')
+                        System.import('app/cv/cv-detail.component.spec'),
+                        System.import('app/home/home.component.spec'),
+                        System.import('app/icon/icon.component.spec'),
+                        System.import('app/navigation/navigation.component.spec')
                     ])
 
-                    //     wait for all imports to load ...
+                    //     Wait for all imports to load ...
                     //     then re-execute `window.onload` which
                     //     triggers the Jasmine test-runner start
                     //     or explain what went wrong.
