@@ -1,9 +1,11 @@
-import { Component, OnInit} from 'angular2/core';
+import { Component, OnInit, Inject} from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
 import { Navigation } from './navigation';
 import { NavigationService } from './navigation.service';
+import {INavigationService} from "./navigation.service.interface";
 import { IconComponent } from '../icon/icon.component';
 import { OnSelect } from "../shared/lib";
+
 
 @Component({
     selector: 'navigation',
@@ -13,11 +15,11 @@ import { OnSelect } from "../shared/lib";
 })
 
 export class NavigationComponent implements OnInit, OnSelect {
-    navigation: Navigation[];
+    navigation: Navigation[] = null; // TODO: No default value
 
-    /* Get route on every route change */
+    /* TODO: Get route on every route change */
     constructor(
-        private _navigationService: NavigationService) {
+        @Inject(INavigationService) private _navigationService: INavigationService) {
     }
 
     private getNavigationItems() {

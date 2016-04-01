@@ -1,7 +1,7 @@
-import {Injectable} from 'angular2/core';
-import {NAVIGATION} from './navigation.data';
+import { Injectable } from 'angular2/core';
+import { NAVIGATION } from './navigation.data';
 import { Navigation } from "./navigation";
-import { INavigationService } from "./navigation.interface";
+import { INavigationService } from "./navigation.service.interface";
 
 @Injectable()
 export class NavigationService implements INavigationService {
@@ -12,7 +12,7 @@ export class NavigationService implements INavigationService {
     }
 
     getNavigationItem(name: string): Promise<Navigation> {
-        return Promise.resolve(NAVIGATION).then(
+        return this.getNavigationItems().then(
             navigation => navigation.filter(navigation => navigation.name === name)[0]
         );
     }

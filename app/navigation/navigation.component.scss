@@ -1,9 +1,17 @@
+// TODO: Use SVG / IcoMoon hamburger
 @import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
-//colors
-$color_lemon_ginger_approx: #9e9c2b;
+// colors
+// TODO: Paste in theme colors, then map to semantic names
 $cod_gray: #0b0b0b;
 $color_blue_chill_approx: #0b97a0;
+$color_radical_red_approx: #f2001c;
+$color_tapa_approx: #0020ff;
+$color_wine_berry_approx: #ff00e2;
+$color_green_approx: #01be01;
+$color_gumbo_approx: #ff7d04;
+$color_aquamarine_blue_approx: #00e2ff;
+$color_gallery_approx: #eee;
 
 //fonts
 $font_0: 'Press Start 2P';
@@ -31,7 +39,7 @@ nav {
   margin: 0;
   padding: 0;
   background: $cod_gray;
-  border-bottom: 5px dotted $color_lemon_ginger_approx;
+  border-bottom: 5px dotted $color_green_approx;
 
   a {
     //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
@@ -41,13 +49,13 @@ nav {
     padding: 1.25rem 0.5rem;
     font-weight: bold;
     text-decoration: none;
-    opacity: 0.425;
+    opacity: 0.4;
 
     &:hover {
-      opacity: 0.735;
+      opacity: 0.7;
 
       programmer-per-icon {
-        opacity: 0.735;
+        opacity: 1;
       }
     }
 
@@ -56,7 +64,7 @@ nav {
       font-weight: 100;
 
       programmer-per-icon {
-        opacity: 1;
+        opacity: 0.3;
       }
     }
   }
@@ -121,34 +129,35 @@ nav {
     height: 3rem;
     font-size: 42px ;
     font-family: fontawesome;
+    color: $color_green_approx;
     cursor: pointer;
   }
 
   .hamburger-checkbox:checked ~ .hamburger-label {
     transform: rotate(90deg);
-    color: white;
   }
 
   .hamburger-checkbox:checked ~ nav {
     //flex-wrap: wrap;
     flex-direction: column;
-    width: 66%;
+    width: 80%;
     height: auto;
-    border-right: 5px dotted $color_lemon_ginger_approx;
+    border-right: 5px dotted $color_green_approx;
   }
 
 
 }
 
 /* Manipulation */
+// TODO: Import from theme
 $colors: (
-        Home: #f20012,
-        Per: #00a9ff,
-        Portfolio: #ecff00,
-        Social: #ff00e7,
-        Cv: #eef3ed,
-        Skills: #00ff04,
-        Blog: #ff8a00
+        Home: $color_green_approx,
+        Per: $color_tapa_approx,
+        Portfolio: $color_wine_berry_approx,
+        Social: $color_radical_red_approx,
+        Cv: $color_gumbo_approx,
+        Skills: $color_aquamarine_blue_approx,
+        Blog: $color_gallery_approx
 );
 
 @each $pointer, $c in $colors
