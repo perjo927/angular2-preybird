@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {NAVIGATION} from './navigation.data';
+import { Injectable } from 'angular2/core';
+import { NAVIGATION } from './navigation.data';
 import { Navigation } from "./navigation";
 import { INavigationService } from "./navigation.service.interface";
 
