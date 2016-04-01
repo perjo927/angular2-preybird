@@ -27,6 +27,7 @@ server will also live-reload.
 
 ### End-to-end tests
 1. `npm run e2e-test`
+2. Webdriver should now open a browser and run the end-to-end tests.
 
 ## CI
 _Coming soon_

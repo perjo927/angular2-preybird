@@ -9,10 +9,12 @@
     "tsc:w": "tsc -w",
     "test": "live-server --open=unit-tests.html",
     "e2e-test": "concurrently \"npm run webdriver\" \"npm run protractor\"",
+    "e2e-test-dev": "concurrently \"npm run webdriver\" \"npm run protractor-debug\"",
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install",
     "protractor": "protractor protractor.conf.js",
+    "protractor-debug": "protractor debug protractor.conf.js",
     "webdriver": "webdriver-manager start && webdriver-manager start"
   },
   "license": "ISC",
