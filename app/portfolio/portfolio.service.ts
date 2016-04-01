@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {PORTFOLIO} from './mock-portfolio';
+import { Injectable } from 'angular2/core';
+import { PORTFOLIO } from './mock-portfolio';
 import { CardService } from "../card/card.service";
 import { Project } from "./project";
 
