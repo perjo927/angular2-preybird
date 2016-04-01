@@ -32,4 +32,6 @@ let router = new MockRouter();
 let mockRouteRegistry = new RouteRegistry(<any> "_component");
 
 export let mockRouter = new Router(mockRouteRegistry, router, <any> "component", null);
-export let mockRouteParams = new RouteParams([]);
+export let mockRouteParams = new RouteParams({
+    "foo": "bar"
+});
