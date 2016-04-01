@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>Programmer Per's Unit Tests</title>
+        <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+        <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+        <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+        <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+    </head>
+
+    <body>
+        <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+        <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+        <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+        <script>
+            System.config({
+                map: {
+                    'angular2': "node_modules/angular2",
+                    'rxjs': "node_modules/rxjs"
+                },
+
+                defaultJSExtensions: true,
+
+                packages: {
+                    'app': {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+
+            // #3. Import the spec files explicitly
+            // TODO: Automate with gulp
+            Promise.all([
+                        System.import('app/card/card.component.spec'),
+                        System.import('app/cv/cv.component.spec'),
+                        System.import('app/cv/cv-detail.component.spec'),
+                        System.import('app/home/home.component.spec'),
+                        System.import('app/icon/icon.component.spec'),
+                        System.import('app/navigation/navigation.component.spec'),
+                        System.import('app/navigation/navigation.service.spec'),
+                        System.import('app/per/about.component.spec'),
+                        System.import('app/portfolio/portfolio.component.spec'),
+                        System.import('app/portfolio/portfolio.service.spec'),
+                        System.import('app/portfolio/project-detail.component.spec'),
+                        System.import('app/skills/skills.component.spec'),
+                        System.import('app/skills/skills-detail.component.spec'),
+                        System.import('app/social/social.component.spec'),
+                        System.import('app/social/social-detail.component.spec'),
+                        System.import('app/app.component.spec')
+                    ])
+
+                    //     Wait for all imports to load ...
+                    //     then re-execute `window.onload` which
+                    //     triggers the Jasmine test-runner start
+                    //     or explain what went wrong.
+                    .then(window.onload)
+                    .catch(console.error.bind(console));
+        </script>
+    </body>
+</html>

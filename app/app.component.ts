@@ -1,7 +1,8 @@
-import { Component } from 'angular2/core';
+import { Component, Provider } from 'angular2/core';
 import { RouteConfig, ROUTER_PROVIDERS } from 'angular2/router';
 import { NAVIGATION } from './navigation/navigation.data';
 import { NavigationComponent } from "./navigation/navigation.component";
+import { INavigationService } from "./navigation/navigation.service.interface";
 import { NavigationService } from "./navigation/navigation.service";
 import { PortfolioService } from './portfolio/portfolio.service';
 
@@ -13,7 +14,7 @@ import { PortfolioService } from './portfolio/portfolio.service';
     providers: [
         ROUTER_PROVIDERS,
         PortfolioService,
-        NavigationService
+        new Provider(INavigationService, {useClass: NavigationService})
     ],
     styleUrls: ['app/app.component.css'],
 })
