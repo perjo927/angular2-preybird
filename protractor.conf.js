@@ -1,4 +1,5 @@
 exports.config = {
+    framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['app/app.e2e.spec.js'],
     // Special option for Angular2, to test against all Angular2 applications
