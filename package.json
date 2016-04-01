@@ -8,6 +8,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "test": "live-server --open=unit-tests.html",
+    "e2e-test": "protractor protractor.conf.js",
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install"
@@ -29,6 +30,7 @@
     "lite-server": "^2.1.0",
     "live-server": "^0.9.2",
     "node-sass": "^3.4.2",
+    "protractor": "^3.2.2",
     "typescript": "^1.8.9",
     "typings": "^0.7.9"
   }
