@@ -1,41 +1,38 @@
-import { Navigation } from "app/navigation/navigation";
-import { NavigationComponent } from 'app/navigation/navigation.component';
-import { NavigationService } from "app/navigation/navigation.service";
-import * as mocks from 'app/navigation/navigation.mocks'
+import { Project } from "app/portfolio/project";
+import { PortfolioComponent } from 'app/portfolio/portfolio.component';
+import { PortfolioService } from "app/portfolio/portfolio.service";
+import * as mocks from 'app/portfolio/portfolio.mocks'
 
-describe('Given that I have an Navigationservice', () => {
-    let service: NavigationService;
+describe('Given that I have a PortfolioService', () => {
+    let service: PortfolioService;
     let promise: Promise<any>;
     let result: any;
 
-    describe('When I call getNavigationItems', () => {
+    describe('When I call getCardItems', () => {
         beforeEach(() => {
-            service = new NavigationService();
-            promise = service.getNavigationItems();
-            promise.then((navigation) => {
-                    result = navigation;
+            service = new PortfolioService();
+            promise = service.getPortfolio();
+            promise.then((collection) => {
+                    result = collection;
                 }
             );
         });
 
         it('Then it must return a promise', () => expect(promise).toEqual(jasmine.any(Promise)));
         // TODO: Mock backend
-        it('Then the promise must return a Navigation object', () => expect(result[0].name).toBe("Home"));
+        it('Then the promise must return a Collection object', () => expect(result[0].id).toBe(10));
     });
 
-    describe('When I call getNavigationItem with "Home"', () => {
+    describe('When I call getProject with id: 10', () => {
+        // TODO: Mock backend
         beforeEach(() => {
-            promise = service.getNavigationItem("Home");
+            promise = service.getProject(10);
+            promise.then(data => result = data);
         });
 
         it('Then it must return a promise', () => expect(promise).toEqual(jasmine.any(Promise)));
+        it('Then it must get the Project object', () => expect(result.id).toBe(10));
     });
 
-    describe('When I call setNavigationItem with the /test route', () => {
-        beforeEach(() => {
-            service.setNavigationItem(mocks.mockRoutes[0]);
-        });
 
-        it('Then the service must return the selected route', () => expect(service.getRoute().name).toBe("Test"));
-    });
 });

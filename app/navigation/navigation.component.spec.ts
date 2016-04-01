@@ -4,7 +4,7 @@ import { NavigationService } from "app/navigation/navigation.service";
 import { INavigationService } from "app/navigation/navigation.service.interface";
 import * as mocks from 'app/navigation/navigation.mocks'
 
-describe('Given that I have an NavigationComponent', () => {
+describe('Given that I have a NavigationComponent', () => {
     let component: NavigationComponent;
 
     describe('When I provide it to my component', () => {

@@ -3,7 +3,7 @@ import { NavigationComponent } from 'app/navigation/navigation.component';
 import { NavigationService } from "app/navigation/navigation.service";
 import * as mocks from 'app/navigation/navigation.mocks'
 
-describe('Given that I have an Navigationservice', () => {
+describe('Given that I have a Navigationservice', () => {
     let service: NavigationService;
     let promise: Promise<any>;
     let result: any;

@@ -6,7 +6,7 @@ import { PortfolioComponent } from "app/portfolio/portfolio.component";
 import { PortfolioService } from "app/portfolio/portfolio.service";
 import * as mocks from 'app/portfolio/portfolio.mocks';
 
-describe('Given that I have an portfolioComponent', () => {
+describe('Given that I have a portfolioComponent', () => {
     let component: PortfolioComponent;
     let service: PortfolioService;
 
@@ -33,8 +33,8 @@ describe('Given that I have an portfolioComponent', () => {
             selectedItem = component.selectedItem;
         });
 
-        describe('And I call getRoute to get the selected Portfolio item', () => {
-            it('Then it must return the id of the item', () => expect(selectedItem.id).toBe(1337));
+        describe('And I use the selectedItem property', () => {
+            it('Then it must return the correct id of the item', () => expect(selectedItem.id).toBe(1337));
         })
     });
 });
