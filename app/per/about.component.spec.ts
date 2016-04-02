@@ -1,4 +1,4 @@
-import { AboutComponent } from 'app/per/about.component';
+import { AboutComponent } from './about.component';
 
 describe('Given that I have an AboutComponent', () => {
     let component = new AboutComponent();

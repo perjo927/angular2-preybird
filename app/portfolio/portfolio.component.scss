@@ -1,4 +1,4 @@
-//colors
+// colors
 $color_gallery_approx: #eee;
 $color_smalt_blue_approx: #607d8b;
 $color_iron_approx: #cfd8dc;
@@ -6,14 +6,14 @@ $white: white;
 $color_ziggurat_approx: #bbd8dc;
 
 * {
-    //Instead of the line below you could use @include box-sizing($bs)
+    // Instead of the line below you could use @include box-sizing($bs)
     box-sizing: border-box;
     &:after {
-        //Instead of the line below you could use @include box-sizing($bs)
+        // Instead of the line below you could use @include box-sizing($bs)
         box-sizing: border-box;
     }
     &:before {
-        //Instead of the line below you could use @include box-sizing($bs)
+        // Instead of the line below you could use @include box-sizing($bs)
         box-sizing: border-box;
     }
 }
@@ -44,7 +44,7 @@ $color_ziggurat_approx: #bbd8dc;
     max-height: 120px;
     min-width: 120px;
     background-color: $color_smalt_blue_approx;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    // Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 2px;
     &:hover {
         background-color: $color_gallery_approx;

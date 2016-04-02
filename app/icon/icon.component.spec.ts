@@ -1,4 +1,4 @@
-import { IconComponent } from 'app/icon/icon.component';
+import { IconComponent } from './icon.component';
 
 describe('Given that I have an IconComponent', () => {
     let component = new IconComponent();

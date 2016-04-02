@@ -1,4 +1,4 @@
-import { SkillsComponent } from 'app/skills/skills.component';
+import { SkillsComponent } from './skills.component';
 
 describe('Given that I have a SkillsComponent', () => {
     let component = new SkillsComponent();
