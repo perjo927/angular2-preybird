@@ -30,4 +30,4 @@ server will also live-reload.
 2. Webdriver should now open a browser and run the end-to-end tests.
 
 ## CI
-_Coming soon_
+Travis CI.
