@@ -22,7 +22,7 @@ install:
   - npm run tsc
 
 before_script:
- - npm run webdriver-manager
+ - npm run webdriver
 
 script:
   - npm run protractor
