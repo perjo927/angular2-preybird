@@ -2,6 +2,8 @@ declare var element: any;
 declare var by: any;
 declare var browser: any;
 
+// TODO: add checks for unit-test.html
+
 describe('Given that I am visiting Programmer Per', () => {
     let home = element(by.tagName('programmer-per-home'));
 
