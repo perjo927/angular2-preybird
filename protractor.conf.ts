@@ -9,7 +9,7 @@ exports.config = {
     },
     restartBrowserBetweenTests: false,
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['app/**/*portfolio.e2e.spec.js'],
+    specs: ['app/**/*.e2e.spec.js'],
 
     // Special option for Angular2, to test against all Angular2 applications
     // on the page. This means that Protractor will wait for every app to be
