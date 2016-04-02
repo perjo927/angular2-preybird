@@ -1,4 +1,4 @@
-import { CvComponent } from 'app/cv/cv.component';
+import { CvComponent } from './cv.component';
 
 describe('Given that I have a CvComponent', () => {
     let cvComponent = new CvComponent();

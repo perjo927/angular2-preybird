@@ -13,16 +13,16 @@ such a manner.
 1. `git clone https://github.com/perjo927/angular2-preybird.git`
 2. `npm install`
 3. `npm start`
-4. You browser should open. If not,go to: [http://localhost:3000](http://localhost:3000)
+4. You browser should open. If not, go to: [http://localhost:3000](http://localhost:3000)
 
 ## Run tests / TDD
 
 ### Unit tests
 
-1. `npm test`
+1. `npm run test`
 2. Your browser should open. If it doesn't, go to: [http://127.0.0.1:8080/unit-tests.html](http://127.0.0.1:8080/unit-tests.html)
 3. For test-driven development, keep the browser tab open while developing, and the tests will live-reload. 
-You can run  `npm start` & `npm test` simultaneously, since the development and test servers run on different ports, and the development
+You can run  `npm start` & `npm run test` simultaneously, since the development and test servers run on different ports, and the development
 server will also live-reload.
 
 ### End-to-end tests
@@ -30,4 +30,4 @@ server will also live-reload.
 2. Webdriver should now open a browser and run the end-to-end tests.
 
 ## CI
-_Coming soon_
+Travis CI.

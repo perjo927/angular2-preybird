@@ -1,0 +1,16 @@
+# whitelist
+#branches:
+#  only:
+#    - master
+#    - develop
+
+language:
+  - node_js
+
+node_js:
+  - '5'
+
+install:
+  - npm install
+  - npm run scss
+  - npm run tsc
