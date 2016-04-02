@@ -1,6 +1,6 @@
-import { Navigation } from 'app/navigation/navigation';
-import { NavigationService } from "app/navigation/navigation.service";
-import {INavigationService} from "./navigation.service.interface";
+import { Navigation } from 'navigation';
+import { NavigationService } from "navigation.service";
+import {INavigationService} from "navigation.service.interface";
 
 
 export let mockRoutes: Navigation[] = [{

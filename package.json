@@ -2,7 +2,7 @@
   "name": "ng2-preybird",
   "version": "0.2.0",
   "scripts": {
-    "start": "concurrently \"npm run csss\" \"npm run scss:w\" \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "concurrently \"npm run scss:w\" \"npm run tsc:w\" \"npm run lite\" ",
     "scss": "gulp sass",
     "scss:w": "gulp sass:watch",
     "tsc": "tsc",

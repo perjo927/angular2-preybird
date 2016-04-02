@@ -1,10 +1,10 @@
 import { Router } from 'angular2/router';
 import { Injectable } from 'angular2/core';
-import { Project } from "app/portfolio/project";
-import { PORTFOLIO } from 'app/portfolio/mock-portfolio';
-import { PortfolioComponent } from "app/portfolio/portfolio.component";
-import { PortfolioService } from "app/portfolio/portfolio.service";
-import * as mocks from 'app/portfolio/portfolio.mocks';
+import { Project } from "project";
+import { PORTFOLIO } from 'mock-portfolio';
+import { PortfolioComponent } from "portfolio.component";
+import { PortfolioService } from "portfolio.service";
+import * as mocks from 'portfolio.mocks';
 
 describe('Given that I have a portfolioComponent', () => {
     let component: PortfolioComponent;

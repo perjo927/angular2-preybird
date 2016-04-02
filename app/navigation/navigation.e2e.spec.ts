@@ -1,3 +1,7 @@
+declare var element: any;
+declare var by: any;
+declare var browser: any;
+
 describe('Given that I am visiting Programmer Per', () => {
     let el = element(by.tagName('navigation'));
     let home = element(by.tagName("a"));

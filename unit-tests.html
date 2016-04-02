@@ -23,6 +23,16 @@
         <script>
             System.config({
                 map: {
+                    'card.component': 'app/card/card.component',
+
+                    'navigation.component': 'app/navigation/navigation.component',
+                    'navigation.service': 'app/navigation/navigation.service',
+                    'navigation.mocks': 'app/navigation/navigation.mocks',
+
+                    'portfolio.component': 'app/portfolio/portfolio.component',
+                    'portfolio.service': 'app/portfolio/portfolio.service',
+                    'portfolio.mocks': 'app/portfolio/portfolio.mocks',
+
                     'angular2': "node_modules/angular2",
                     'rxjs': "node_modules/rxjs"
                 },
@@ -38,7 +48,7 @@
             });
 
             // #3. Import the spec files explicitly
-            // TODO: Automate with gulp
+            // TODO: Import buncdle
             Promise.all([
                         System.import('app/card/card.component.spec'),
                         System.import('app/cv/cv.component.spec'),

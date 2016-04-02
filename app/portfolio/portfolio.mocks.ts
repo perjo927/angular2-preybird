@@ -2,8 +2,8 @@ import { Router } from "angular2/ts/src/router/router";
 import { RouteRegistry } from "angular2/src/router/route_registry";
 import { RouteParams } from "angular2/src/router/instruction";
 import { Navigation } from 'app/navigation/navigation';
-import { PortfolioService } from "app/portfolio/portfolio.service";
-import { Project } from "app/portfolio/project";
+import { PortfolioService } from "portfolio.service";
+import { Project } from "project";
 
 export let mockCollection: Project[] = [{
     "id": 1337,
