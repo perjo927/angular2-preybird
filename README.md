@@ -1,4 +1,4 @@
-# Programmer Per: Angular 2 
+# Programmer Per: Angular 2 [![Build Status](https://travis-ci.org/perjo927/angular2-preybird.svg?branch=master)](https://travis-ci.org/perjo927/angular2-preybird)
 
 This is a project for presenting me, "[Per the Programmer](http://www.programmerper.com)".
 
