@@ -18,7 +18,7 @@ before_install:
 
 install:
   - npm install
-  - npm run build
-
+  - npm run tsc
+  - npm run scss
 script:
-  - gulp unit
+  - npm run e2e-test
