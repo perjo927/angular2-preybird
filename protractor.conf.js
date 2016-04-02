@@ -1,9 +1,9 @@
 exports.config = {
     baseUrl: "http://localhost:3000",
     capabilities: { 'browserName': 'chrome' },
-    framework: 'jasmine2',
-    // TODO: Test mobile and desktop
+    framework: 'jasmine',
     onPrepare: function () {
+        // TODO: Test mobile and desktop
         browser.manage().window().setSize(1600, 1000);
     },
     restartBrowserBetweenTests: false,

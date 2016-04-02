@@ -13,7 +13,7 @@ such a manner.
 1. `git clone https://github.com/perjo927/angular2-preybird.git`
 2. `npm install`
 3. `npm start`
-4. You browser should open. If not,go to: [http://localhost:3000](http://localhost:3000)
+4. You browser should open. If not, go to: [http://localhost:3000](http://localhost:3000)
 
 ## Run tests / TDD
 
