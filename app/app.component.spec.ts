@@ -1,4 +1,4 @@
-import { AppComponent } from 'app/app.component';
+import { AppComponent } from './app.component';
 
 describe('Given that I have an AppComponent', () => {
     let component = new AppComponent();

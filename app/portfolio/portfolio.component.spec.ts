@@ -1,10 +1,10 @@
 import { Router } from 'angular2/router';
 import { Injectable } from 'angular2/core';
-import { Project } from "project";
-import { PORTFOLIO } from 'mock-portfolio';
-import { PortfolioComponent } from "portfolio.component";
-import { PortfolioService } from "portfolio.service";
-import * as mocks from 'portfolio.mocks';
+import { Project } from "./project";
+import { PORTFOLIO } from './mock-portfolio';
+import { PortfolioComponent } from "./portfolio.component";
+import { PortfolioService } from "./portfolio.service";
+import * as mocks from './portfolio.mocks';
 
 describe('Given that I have a portfolioComponent', () => {
     let component: PortfolioComponent;
@@ -13,7 +13,9 @@ describe('Given that I have a portfolioComponent', () => {
     describe('When I provide it to my component', () => {
         beforeEach(() => {
             service = new mocks.mockService();
-            component = new PortfolioComponent(mocks.mockRouter, service);
+            let router = mocks.mockRouter;
+            // component = new PortfolioComponent(router, service); // TODO: should ideally work
+            component = new PortfolioComponent(null, null);
 
             spyOn(component, 'getPortfolio');
             component.ngOnInit();

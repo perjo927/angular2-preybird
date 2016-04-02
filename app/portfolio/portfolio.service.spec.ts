@@ -1,7 +1,7 @@
-import { Project } from "project";
-import { PortfolioComponent } from 'portfolio.component';
-import { PortfolioService } from "portfolio.service";
-import * as mocks from 'portfolio.mocks'
+import { Project } from "./project";
+import { PortfolioComponent } from './portfolio.component';
+import { PortfolioService } from "./portfolio.service";
+import * as mocks from './portfolio.mocks'
 
 describe('Given that I have a PortfolioService', () => {
     let service: PortfolioService;

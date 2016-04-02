@@ -1,7 +1,7 @@
-import { Navigation } from "navigation";
-import { NavigationComponent } from 'navigation.component';
-import { NavigationService } from "navigation.service";
-import * as mocks from 'navigation.mocks'
+import { Navigation } from "./navigation";
+import { NavigationComponent } from './navigation.component';
+import { NavigationService } from "./navigation.service";
+import * as mocks from './navigation.mocks'
 
 describe('Given that I have a Navigationservice', () => {
     let service: NavigationService;

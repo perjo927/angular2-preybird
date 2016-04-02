@@ -1,4 +1,4 @@
-import { SocialComponent } from 'app/social/social.component';
+import { SocialComponent } from './social.component';
 
 describe('Given that I have a SocialComponent', () => {
     let component = new SocialComponent();
