@@ -21,8 +21,6 @@ install:
   - npm run scss
   - npm run tsc
 
-before_script:
- - npm run webdriver
-
 script:
+  - npm run webdriver
   - npm run protractor
