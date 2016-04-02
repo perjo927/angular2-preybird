@@ -20,7 +20,3 @@ install:
   - npm install
   - npm run scss
   - npm run tsc
-
-script:
-  - npm run webdriver
-  - npm run protractor
