@@ -6,7 +6,7 @@
 
 language:
   - node_js
-a
+
 node_js:
   - '5'
 
@@ -18,8 +18,8 @@ before_install:
 
 install:
   - npm install
-  - npm run tsc
   - npm run scss
+  - npm run tsc
 
 script:
   - npm run e2e-test
