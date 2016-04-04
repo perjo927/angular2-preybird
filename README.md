@@ -30,4 +30,4 @@ server will also live-reload.
 2. Webdriver should now open a browser and run the end-to-end tests.
 
 ## CI
-Travis CI.
+I use [Travis CI](https://travis-ci.org/perjo927/angular2-preybird). 
