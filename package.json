@@ -17,7 +17,6 @@
     "protractor": "protractor protractor.conf.js",
     "protractor-debug": "protractor debug protractor.conf.js",
     "release": "gulp release",
-    "typings": "^0.7.9",
     "webdriver": "webdriver-manager update && webdriver-manager start"
   },
   "license": "ISC",
@@ -27,7 +26,8 @@
     "es6-shim": "^0.35.0",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.24",
-    "zone.js": "0.6.6"
+    "zone.js": "0.6.6",
+    "typings": "^0.7.9"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
