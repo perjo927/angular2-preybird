@@ -6,7 +6,6 @@ import { INavigationService } from "./navigation/navigation.service.interface";
 import { NavigationService } from "./navigation/navigation.service";
 import { PortfolioService } from './portfolio/portfolio.service';
 
-
 @Component({
     selector: 'programmer-per-app',
     templateUrl: 'app/app.component.html',
