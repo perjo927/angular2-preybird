@@ -1,14 +1,14 @@
 {
   "name": "ng2-preybird",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "scripts": {
-    "start": "concurrently \"npm run scss:w\" \"npm run tsc:w\" \"npm run lite\" ",
-    "scss": "gulp sass",
-    "scss:w": "gulp sass:watch",
+    "start": "concurrently \"npm run sass\" \"npm run sass:w\" \"npm run tsc:w\" \"npm run lite\" ",
+    "sass": "gulp sass",
+    "sass:w": "gulp sass:watch",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "test": "tsc",
-    "tdd": "live-server --open=unit-tests.html",
+    "tdd": "live-server --open=unit-tests.html --port=8083",
     "e2e-test": "concurrently \"npm run webdriver\" \"npm run protractor\"",
     "e2e-test-dev": "concurrently \"npm run webdriver\" \"npm run protractor-debug\"",
     "lite": "lite-server",
@@ -16,6 +16,7 @@
     "postinstall": "typings install",
     "protractor": "protractor protractor.conf.js",
     "protractor-debug": "protractor debug protractor.conf.js",
+    "release": "gulp release",
     "webdriver": "webdriver-manager update && webdriver-manager start"
   },
   "license": "ISC",
@@ -25,7 +26,8 @@
     "es6-shim": "^0.35.0",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.24",
-    "zone.js": "0.6.6"
+    "zone.js": "0.6.6",
+    "typings": "^0.7.9"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
@@ -37,7 +39,6 @@
     "live-server": "^0.9.2",
     "node-sass": "^3.4.2",
     "protractor": "^3.2.2",
-    "typescript": "^1.8.9",
-    "typings": "^0.7.9"
+    "typescript": "^1.8.9"
   }
 }
