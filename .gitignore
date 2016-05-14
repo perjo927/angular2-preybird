@@ -8,3 +8,5 @@ typings
 app/**/*.js
 *.map
 app/**/*.css
+
+dist-asp/**/*.spec.js

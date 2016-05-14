@@ -1,0 +1,22 @@
+<!-- TODO: use SVG / IcoMoon -->
+<input id="hamburger" type="checkbox" class="hamburger-checkbox">
+<label for="hamburger" class="hamburger-label" role="button">&#xf0c9;</label>
+
+<nav role='navigation'>
+    <a *ngFor="#item of navigation"
+       [routerLink]="item.link"
+       (click)="onSelect(item)">
+        <programmer-per-icon
+                class="{{item.name}}"
+                [class.selected]="item === getRoute()">
+        </programmer-per-icon>
+
+        <span class="{{item.name}}" [class.selected]="item === getRoute()">
+            {{item.name}}
+        </span>
+    </a>
+</nav>
+
+<section>
+    <router-outlet></router-outlet>
+</section>
