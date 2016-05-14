@@ -1,0 +1,18 @@
+<div class="grid grid-pad">
+    <div *ngFor="#project of collection"
+         (click)="onSelect(project)"
+         class="col-1-4">
+
+        <div class="module project" [class.selected]="project === selectedItem">
+            <h4>{{project.title}}</h4>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="selectedItem" class="selected-item">
+    <h2>
+        {{selectedItem.title | uppercase}} is what I want to see
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>

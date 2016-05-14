@@ -1,0 +1,50 @@
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+p {
+  animation-name: fadein;
+  animation-duration: 10s;
+  padding: 0 4rem; }
+
+a {
+  animation-name: fadein;
+  animation-duration: 10s;
+  color: #01be01;
+  font-weight: bold;
+  text-decoration: none; }
+
+h3 {
+  text-align: center;
+  margin-bottom: 0; }
+
+@keyframes type {
+  0% {
+    width: 0; }
+  50% {
+    width: 33%; }
+  100% {
+    width: 100%; } }
+
+@keyframes blink {
+  to {
+    opacity: .0; } }
+
+.home-title {
+  text-shadow: 0.5rem 0.2rem 2.5rem #196e07;
+  color: #01be01; }
+
+.type-text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end); }
+
+.blink {
+  animation: blink 1s infinite; }
+
+span {
+  color: #01be01;
+  font-family: Press Start 2P, Arial, Helvetica, sans-serif; }

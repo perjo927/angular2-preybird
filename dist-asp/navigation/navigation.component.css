@@ -1,0 +1,108 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@keyframes slidein {
+  from {
+    opacity: 0.1;
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    opacity: 1;
+    margin-left: 0;
+    width: 100%; } }
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: #0b0b0b;
+  border-bottom: 5px dotted #01be01; }
+  nav a {
+    transition: font-weight 0.67s ease, opacity 0.67s ease;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.25rem 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0.4; }
+    nav a:hover {
+      opacity: 0.7; }
+      nav a:hover programmer-per-icon {
+        opacity: 1; }
+    nav a:focus, nav a .selected {
+      opacity: 1;
+      font-weight: 100; }
+      nav a:focus programmer-per-icon, nav a .selected programmer-per-icon {
+        opacity: 0.3; }
+  nav programmer-per-icon {
+    transition: opacity 0.67s ease;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.7rem;
+    opacity: 0; }
+  nav span {
+    font-family: "Press Start 2P", "Arial", "Helvetica", "sans-serif";
+    font-weight: 400;
+    font-size: 1rem; }
+
+/* Media */
+@media (min-width: 701px) {
+  nav {
+    animation-duration: 3s;
+    animation-name: slidein; }
+  .hamburger-checkbox, .hamburger-label {
+    display: none; } }
+
+@media (max-width: 700px) {
+  nav {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: all .3s; }
+    nav a {
+      justify-content: center; }
+  section {
+    margin-top: 3.5rem; }
+  .hamburger-checkbox {
+    position: absolute;
+    opacity: 0; }
+  .hamburger-label {
+    transition: all cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    font-size: 42px;
+    font-family: fontawesome;
+    color: #01be01;
+    cursor: pointer; }
+  .hamburger-checkbox:checked ~ .hamburger-label {
+    transform: rotate(90deg); }
+  .hamburger-checkbox:checked ~ nav {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    border-right: 5px dotted #01be01; } }
+
+/* Manipulation */
+.Home {
+  color: #01be01; }
+
+.Per {
+  color: #0020ff; }
+
+.Portfolio {
+  color: #ff00e2; }
+
+.Social {
+  color: #f2001c; }
+
+.Cv {
+  color: #ff7d04; }
+
+.Skills {
+  color: #00e2ff; }
+
+.Blog {
+  color: #eee; }
