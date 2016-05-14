@@ -1,8 +1,9 @@
 {
   "name": "ng2-preybird",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "scripts": {
     "start": "concurrently \"npm run sass\" \"npm run sass:w\" \"npm run tsc:w\" \"npm run lite\" ",
+    "compile": "npm run sass && npm run tsc",
     "sass": "gulp sass",
     "sass:w": "gulp sass:watch",
     "tsc": "tsc",
@@ -17,6 +18,7 @@
     "protractor": "protractor protractor.conf.js",
     "protractor-debug": "protractor debug protractor.conf.js",
     "release": "gulp release",
+    "asp-release": "npm run compile && gulp asp-release",
     "webdriver": "webdriver-manager update && webdriver-manager start"
   },
   "license": "ISC",
